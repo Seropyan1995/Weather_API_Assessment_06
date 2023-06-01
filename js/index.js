@@ -8,7 +8,7 @@ var cities = [];
 
 $(function(){
     defaultLoad();
-});
+})
 
 function cityButton() {
     var cityBtn = $('.city');
@@ -23,7 +23,7 @@ function cityButton() {
 function cityForm() {
     citySearch.submit(function(event){
         event.preventDefault();
-        var city = $('#new-search').val();
+        var city = $('#cityNew').val();
         if(!city){
             return;
         }
@@ -58,7 +58,6 @@ function getCoordinates(city) {
 };
 
 function getCurrentWeather(lat, lon) {
-    console.log("get current city weather with coordinates:" + lat + "/" + lon)
     fetch('https://api.openweathermap.org/data/2.5/weather?lat=' + lat +  '&lon=' + lon + '&units=imperial&appid=' + key)
         .then(function(response) {
             return response.json();
@@ -171,7 +170,7 @@ function addCity (city) {
     cityStorage();
     updateList();
 
-    $('#new-search').val("");
+    $('#cityNew').val("");
 }
 
 function defaultLoad(city) {
