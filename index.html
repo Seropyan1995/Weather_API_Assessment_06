@@ -12,7 +12,9 @@
       integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
       crossorigin="anonymous"
     />
-    <link href="https://fonts.googleapis.com/css2?family=Domine:wght@700&family=Playfair+Display:wght@500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel&family=Sedgwick+Ave+Display&display=swap" rel="stylesheet">
     <link
       rel="stylesheet"
       href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css"
@@ -21,40 +23,38 @@
 
 </head>
 
-<body class="">
+<body class="bg-dark bg-gradient ">
     <header>
-        <h1>Weather Dashboard</h1>
+        <h1 class="text-info">Weather Dashboard</h1>
     </header>
 
-    <main class="">
-        <div class="">
-
-            <section class="">
+    <main>
+        <div class="container-fluid">
+            <section class="col-12 col-md-10 col-xl-6">
 
                 <form id="city-search">
-                    <label class="text-light" for="city-new">Search for a City:</label>
+                    <label class="text-info" for="city-new">Search for a City:</label>
                     <input type="text" id="city-new" />
-                    <input class="btn btn-secondary " type="submit" id="submit-button" value="Search" />
+                    <input class="btn btn-secondary text-info" type="submit" id="submit-button" value="Search" />
                 </form>
 
                 <div class="container" id="city-list"></div>
             </section>
 
-            <section class="">
-                <article class="">
-                    <div class="">
-                        <h2 class="" id="name-today"></h2>
-                        <h3 class="" id="today-date"></h3>
-                        <img class="icons" />
-                        <div class="" id="today-card">
+            <section class="container-fluid">
+                <article>
+                    <div class="weather-card bg-light">
+                        <h2 class="text-warning" id="name-today"></h2>
+                        <h3 class="text-warning" id="today-date"></h3>
+                        <img class="weather-icon icons" />
+                        <div class="text-warning" id="today-card">
                         </div>
                     </div>
                 </article>
-
-                <section class="">
-                    <h2 class="text-light">5-Day Forecast</h2>
+                <article class="weekBackground">
+                    <h2 class="text-info">5-Day Forecast</h2>
                     <div class="row" id="week-forecast"></div>
-                </section>
+                </article>
             </section>
         </div>
     </main>

@@ -1,0 +1,29 @@
+*{
+    margin: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Cinzel', serif;
+    font-family: 'Sedgwick Ave Display', cursive;
+  }
+
+h1{
+	color:rgb(244, 247, 247);
+	text-align: center;
+    padding: 15px 15px;
+}
+
+.weather-card {
+    max-width: 400px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(148, 8, 8, 0.1);
+    text-align: left;
+    border: 2px black solid;
+}
+
+.weather-icon {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 10px;
+}

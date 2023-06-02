@@ -85,7 +85,7 @@ function updateList() {
     var citiesHtml = "";
     for (var i=0; i < cities.length; i++) {
         citiesHtml += '<row class="row btnRow">';
-        citiesHtml += '<button class="btn btn-dark btn-outline-primary city">' + cities[i] + '</button>';
+        citiesHtml += '<button class="btn btn-light btn-outline-primary text-black city ">' + cities[i] + '</button>';
         citiesHtml += '</row>';
     }
     $cityList.html(citiesHtml);
@@ -146,7 +146,7 @@ function displayForecast(data) {
 		for (let i = 0; i < 5; i++) {
 
 			var divElCard = $('<div>');
-			divElCard.attr('class', 'card  bg-light mb-3 cardOne');
+			divElCard.attr('class', 'card  bg-light text-primary mb-3 cardOne');
 			divElCard.attr('style', 'max-width: 215px;');
 			weekForecastEl.append(divElCard);
 
@@ -176,7 +176,7 @@ function displayForecast(data) {
             divElBody.append(pwindEl);
         }
 }
-// displays the current weather 
+// displays the current weather
 function displayCurrentWeather(data) {
     var todayCard = $("#today-card")
     $(todayCard).empty();
